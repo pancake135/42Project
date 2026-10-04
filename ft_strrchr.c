@@ -6,7 +6,7 @@
 /*   By: ujchoi <ujchoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/04 14:26:30 by ujchoi            #+#    #+#             */
-/*   Updated: 2026/10/04 14:27:01 by ujchoi           ###   ########.fr       */
+/*   Updated: 2026/10/04 17:33:23 by ujchoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char *ft_strrchr(const char *s, int c)
 	{
 		if (s[i] == (char)c)
 			return (s + i);
-		i--;		
+		i--;
 	}
 	return (NULL);
 }

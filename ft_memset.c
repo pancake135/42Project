@@ -6,7 +6,7 @@
 /*   By: ujchoi <ujchoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/04 11:37:59 by ujchoi            #+#    #+#             */
-/*   Updated: 2026/10/04 11:39:33 by ujchoi           ###   ########.fr       */
+/*   Updated: 2026/10/04 17:32:50 by ujchoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	*ft_memset(void *s, int c, size_t n)
 {
 	size_t			i;
-	unsigned char 	g;
+	unsigned char	g;
 	unsigned char	*ptr;
 
 	i = 0;

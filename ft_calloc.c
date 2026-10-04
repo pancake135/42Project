@@ -6,7 +6,7 @@
 /*   By: ujchoi <ujchoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/04 16:36:28 by ujchoi            #+#    #+#             */
-/*   Updated: 2026/10/04 16:49:23 by ujchoi           ###   ########.fr       */
+/*   Updated: 2026/10/04 17:33:39 by ujchoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*ptr;
-	
+
 	if (nmemb == 0 || size == 0)
 	{
 		ptr = (void *)malloc(1);

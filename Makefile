@@ -1,14 +1,14 @@
 NAME = libft
 
-SRCS = ft*.c
+SRCS = *.c
 OBJS = $(SRCS:.c=.o)
 CC = cc
 CFLAGS = -Wall -Werror -Wextra
 
 all: $(NAME)
 
-$(NAME): OBJS
-	ac rcs $@ $<
+$(NAME): $(OBJS)
+	ar rcs $@ $^
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@

@@ -6,7 +6,7 @@
 /*   By: ujchoi <ujchoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/04 11:56:58 by ujchoi            #+#    #+#             */
-/*   Updated: 2026/10/04 16:57:27 by ujchoi           ###   ########.fr       */
+/*   Updated: 2026/10/04 17:30:58 by ujchoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,16 +20,16 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 
 	result = (unsigned char *)dest;
 	origin = (unsigned char *)src;
-	if (*result > *origin)
+	if (result >= origin)
 	{
-		i = n - 1;
+		i = n;
 		while (i > 0)
 		{
-			result[i] = origin[i];
 			i--;
+			result[i] = origin[i];
 		}
 	}
-	else if (*result < *origin)
+	else if (result < origin)
 	{
 		i = 0;
 		while (i < n)
