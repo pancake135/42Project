@@ -1,30 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ujchoi <ujchoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/04 11:37:59 by ujchoi            #+#    #+#             */
-/*   Updated: 2026/10/04 11:39:33 by ujchoi           ###   ########.fr       */
+/*   Created: 2026/10/04 12:38:45 by ujchoi            #+#    #+#             */
+/*   Updated: 2026/10/04 12:47:29 by ujchoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *s, int c, size_t n)
+size_t	strlcat(char *dst, const char *src, size_t size)
 {
-	size_t			i;
-	unsigned char 	g;
-	unsigned char	*ptr;
+	size_t	i;
+	size_t	j;
+	size_t	dst_len;
 
 	i = 0;
-	g = (unsigned char)c;
-	ptr = (unsigned char *)s;
-	while (i < n)
-	{
-		ptr[i] = g;
+	j = 0;
+	while (dst[i] != '\0' && i < size)
 		i++;
+	while (src[j] != '\0' && (i + j + 1) < size)
+	{
+		dst[i + j] = src[j];
+		j++;
 	}
-	return (s);
+	if (i < size)
+		dst[i + j] = '\0';
+	while (src[j])
+		j++;
+	return (i + j);
 }

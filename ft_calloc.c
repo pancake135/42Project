@@ -1,30 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ujchoi <ujchoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/04 11:37:59 by ujchoi            #+#    #+#             */
-/*   Updated: 2026/10/04 11:39:33 by ujchoi           ###   ########.fr       */
+/*   Created: 2026/10/04 16:36:28 by ujchoi            #+#    #+#             */
+/*   Updated: 2026/10/04 16:49:23 by ujchoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *s, int c, size_t n)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	size_t			i;
-	unsigned char 	g;
-	unsigned char	*ptr;
-
-	i = 0;
-	g = (unsigned char)c;
-	ptr = (unsigned char *)s;
-	while (i < n)
+	void	*ptr;
+	
+	if (nmemb == 0 || size == 0)
 	{
-		ptr[i] = g;
-		i++;
+		ptr = (void *)malloc(1);
+		if (!ptr)
+			return (NULL);
+		ft_bzero(ptr, 1);
+		return (ptr);
 	}
-	return (s);
+	if (nmemb > SIZE_MAX / size)
+		return (NULL);
+	ptr = (void *)malloc(nmemb * size);
+	if (!ptr)
+		return (NULL);
+	ft_bzero(ptr, nmemb * size);
+	return (ptr);
 }

@@ -1,30 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ujchoi <ujchoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/04 11:37:59 by ujchoi            #+#    #+#             */
-/*   Updated: 2026/10/04 11:39:33 by ujchoi           ###   ########.fr       */
+/*   Created: 2026/10/04 11:56:58 by ujchoi            #+#    #+#             */
+/*   Updated: 2026/10/04 16:57:27 by ujchoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *s, int c, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	size_t			i;
-	unsigned char 	g;
-	unsigned char	*ptr;
+	unsigned char	*result;
+	unsigned char	*origin;
 
-	i = 0;
-	g = (unsigned char)c;
-	ptr = (unsigned char *)s;
-	while (i < n)
+	result = (unsigned char *)dest;
+	origin = (unsigned char *)src;
+	if (*result > *origin)
 	{
-		ptr[i] = g;
-		i++;
+		i = n - 1;
+		while (i > 0)
+		{
+			result[i] = origin[i];
+			i--;
+		}
 	}
-	return (s);
+	else if (*result < *origin)
+	{
+		i = 0;
+		while (i < n)
+		{
+			result[i] = origin[i];
+			i++;
+		}
+	}
+	return (dest);
 }
