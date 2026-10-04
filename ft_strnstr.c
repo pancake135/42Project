@@ -6,7 +6,7 @@
 /*   By: ujchoi <ujchoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/04 17:31:44 by ujchoi            #+#    #+#             */
-/*   Updated: 2026/10/04 17:39:29 by ujchoi           ###   ########.fr       */
+/*   Updated: 2026/10/04 17:52:32 by ujchoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		while (i + j < len && big[i + j] && big[i + j] == little[j])
 			j++;
 		if (little[j] == '\0')
-			return ((char *)big[i]);
+			return ((char *)&big[i]);
 		i++;
 	}
 	return (NULL);
