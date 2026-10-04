@@ -1,4 +1,4 @@
-NAME = libft
+NAME = libft.a
 
 SRCS = *.c
 OBJS = $(SRCS:.c=.o)

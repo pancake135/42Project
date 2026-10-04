@@ -6,7 +6,7 @@
 /*   By: ujchoi <ujchoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/04 17:31:55 by ujchoi            #+#    #+#             */
-/*   Updated: 2026/10/04 17:31:56 by ujchoi           ###   ########.fr       */
+/*   Updated: 2026/10/04 17:35:47 by ujchoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 char *ft_substr(char const *s, unsigned int start, size_t len)
 {
-
+	
 }

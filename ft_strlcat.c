@@ -6,7 +6,7 @@
 /*   By: ujchoi <ujchoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/04 12:38:45 by ujchoi            #+#    #+#             */
-/*   Updated: 2026/10/04 17:31:26 by ujchoi           ###   ########.fr       */
+/*   Updated: 2026/10/04 17:43:48 by ujchoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	i;
 	size_t	j;
-	size_t	dst_len;
 
 	i = 0;
 	j = 0;

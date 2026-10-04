@@ -6,7 +6,7 @@
 /*   By: ujchoi <ujchoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/04 14:26:30 by ujchoi            #+#    #+#             */
-/*   Updated: 2026/10/04 17:33:23 by ujchoi           ###   ########.fr       */
+/*   Updated: 2026/10/04 17:38:26 by ujchoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,12 @@ char *ft_strrchr(const char *s, int c)
 	while (s[i] != '\0')
 		i++;
 	while ((char)c == '\0')
-		return (s + i);
+		return ((char *)s + i);
 	while (i > 0)
 	{
-		if (s[i] == (char)c)
-			return (s + i);
 		i--;
+		if (s[i] == (char)c)
+			return ((char *)s + i);
 	}
 	return (NULL);
 }
